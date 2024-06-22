@@ -1,62 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Restaurante Black Goose</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Restaurante D'antojo</title>
     <style>
         body {
-            background-color: #ecf0f1;
-            margin: 0 10%;
-            font-family: sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
         }
-
-        h1{
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #ff5722;
+            color: #ffffff;
+            padding: 20px 0;
             text-align: center;
-            font-family: serif;
-            font-weight: normal;
-            text-transform: uppercase;
-            border-bottom: 1px solid #57b1dc;
-            margin-top: 30px;
+            border-radius: 10px;
         }
-
-        h2{
-            color: #d1633c;
-            font-size: 1em;
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
-
-        h3{
-            color:  red;
-        }
-
-        h4{
-            color: brown;
+        .section-title {
             text-align: center;
-            text-transform: uppercase;
+            margin: 20px 0;
+            font-size: 2em;
+            color: #ff5722;
+        }
+        .menu-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: #343a40;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        .menu-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .menu-item p {
+            margin: 5px 0 0;
+        }
+        .price {
+            color: #ff5722;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
-    <h1>
-        <img src="img/blackgoose.png" alt="">
-        <br>Restaurante Black Goose
-    </h1>
-
-    <h2>Sobre el Restaurante</h2>
-    <p>El restaurante Black Goose ofrece almuerzos y cenas informales en un ambiente relajado.
-        El menu cambia periodicamenteb para destacar los ingredientes locales mas frescos.
-    </p>
-
-    <h2>Servicio de Comida</h2>
-    <p>Diviertet <em>Nosotros nos encargamos de la concina.</em> Servicio de comida Black
-    Goose puede manejar eventos desde refrigerios para una reunion hasta elegantes 
-      eventos para recaudar fondos cooperativos.</p>
-
-      <h2> Ubicacion y Horario</h2>
-      <p>Guadalajara, Jalisco; <br>Lunes a Jueves 11 am a 9pm; <br> Viernes y Sabado, de 11 a 24 h</p>
-
-      <h3>¿Cual es tu opinion?</h3>
-
-      <h4>Mi opinion es...</h4>
-
+    <div class="overlay"></div>
+    <header>
+        <h1>¡Bienvenidos al Restaurante D'antojo!</h1>
+        <h2>Difruta de la Exquisitez de nuestra Comida...</h2>
+    </header>
+    <div class="container">
+        <section class="menu-section">
+            <h2 class="section-title">🌮 Tacos 🌮</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Cabeza de Res</h3>
+                    <p class="price">$25 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Pastor</h3>
+                    <p class="price">$25 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Bistec</h3>
+                    <p class="price">$25 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Longaniza</h3>
+                    <p class="price">$25 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Campechano</h3>
+                    <p>Bistec con Longaniza</p>
+                    <p class="price">$25 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Suadero</h3>
+                    <p class="price">$25 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tripa</h3>
+                    <p class="price">$26 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tacos con Queso</h3>
+                    <p class="price">$26 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tacos con Tortilla Hecha a Mano</h3>
+                    <p class="price">$29 MXN</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2 class="section-title">🧀 Quesadillas 🧀</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Queso</h3>
+                    <p class="price">$30 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Huitlacoche</h3>
+                    <p class="price">$30 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tinga</h3>
+                    <p class="price">$30 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Mole</h3>
+                    <p class="price">$30 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Papas Con Loganiza</h3>
+                    <p class="price">$30 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Champiñon</h3>
+                    <p class="price">$30 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Bistec</h3>
+                    <p class="price">$33 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Campechana</h3>
+                    <p>Bistec con Loganiza</p>
+                    <p class="price">$33 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Chicharron Prensado</h3>
+                    <p class="price">$33 MXN</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2 class="section-title">🥪 Tortas 🥪</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Torta de Milanesa</h3>
+                    <p>Milanesa de Puerco, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$35 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Milanesa con Queso</h3>
+                    <p>Milanesa de Puerco, aguacate, jitomate, lechuga, cebolla, chile, frijoles, Queso Oaxaca Fundido y mayonesa</p>
+                    <p class="price">$40 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Pierna</h3>
+                    <p>Pierna, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$35 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Jamón</h3>
+                    <p>Jamón, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$35 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Salchicha</h3>
+                    <p>Salchicha, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$35 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Huevo</h3>
+                    <p>Huevo, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$35 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Bistec</h3>
+                    <p>Bistec, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$35 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Salchicha con Queso</h3>
+                    <p>Salchicha, Queso Oaxaca fundido, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$40 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta de Pierna con Queso</h3>
+                    <p>Pierna, Queso Oaxaca fundido, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$35 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta Cubana</h3>
+                    <p>Un poco de Todo, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$60 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta Hawaiana</h3>
+                    <p>Jamon, Queso Oaxaca, Queso Amarillo, Piña, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$40 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta Española</h3>
+                    <p>Pierna, Jamon, Queso Oaxaca, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$40 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta Toluqueña</h3>
+                    <p>Longaniza, Huevo, Queso Oaxaca, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$40 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Torta Rusa</h3>
+                    <p>Milanesa, Pierna, Queso Oaxaca, aguacate, jitomate, lechuga, cebolla, chile, frijoles y mayonesa</p>
+                    <p class="price">$40 MXN</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2 class="section-title">🍽️ Menú del Día 🍽️</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Preguntar por los Guisados del Día</h3>
+                    <p>Incluye Tortillas, Agua</p>
+                    <p class="price">$100 MXN</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2 class="section-title">🍲 Especiales a la Carta 🍲</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Enmoladas</h3>
+                    <p>Tortillas Rellenas de Pollo Bañadas en Mole Verde o Rojo, Cubiertas con crema y queso doble crema. Acompañadas de Frijoles Refritos</p>
+                    <p class="price">$100 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Carne Asada</h3>
+                    <p>Costilla de Res asada, acompañado de Arroz y Ensalada</p>
+                    <p class="price">$120 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Filete de Pescado</h3>
+                    <p>Filete de Pescado (Asado o Empanizado). Acompañado de Arroz y Ensalada</p>
+                    <p class="price">$110 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Pechuga al Gusto</h3>
+                    <p>Pechuga de Pollo (Asada o Empanizada). Acompañado de Arroz y Ensalada</p>
+                    <p class="price">$120 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Pancita de Res</h3>
+                    <p class="price">$120 MXN</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2 class="section-title">🍡 Antojitos 🍡</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Chilaquiles</h3>
+                    <p>Totopos hecho en casa con pollo bañados en Slasa Verde, cubiertos de Crema, Quseo doble crema. Acompañados con frijoles Refritos. </p>
+                    <p class="price">$90 MXN</p>
+                </div>
+                <div class="menu-item">
+                <h3>Chilaquiles Suizos</h3>
+                <p>Totopos hecho en casa con pollo bañados en una Salsa espcial, Cubiertos de Queso Oaxaca Fundido. Acompañados con frijoles Refritos. </p>
+                <p class="price">$95 MXN</p>
+                </div>
+                <div class="menu-item">
+                <h3>Enchiladas</h3>
+                 <p>Tortillas rellenas de pollo, bañadas en Slasa Verde, cubiertos de Crema, Quseo doble crema. Acompañados con frijoles Refritos. </p>
+                 <p class="price">$90 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Esquites</h3>
+                    <p>Granos de elote, mayonesa, queso, limón y chile en polvo</p>
+                    <p class="price">$20 MXN</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Enchiladas Suizas</h3>
+                     <p>Tortillas rellenas de pollo, bañadas en una Salsa Especial, cubiertas de Queso Oaxaca Fundido. Acompañados con frijoles Refritos. </p>
+                     <p class="price">$95 MXN</p>
+                    </div>
+                    <div class="menu-item">
+                        <h3>Huaraches</h3>
+                         <p>Bistec, Longaniza, Campechano. Cubierto de Frijol, Lechuga, Crema y Queso doble Crema </p>
+                         <p class="price">$65 MXN</p>
+                        </div>           
+                     <div class="menu-item">
+                            <h3>Tacos Dorados</h3>
+                             <p>Tortillas rellenas de pollo, Dorados en Aceite, cubiertos de Lechuga Crema y Quseo doble crema. </p>
+                             <p class="price">$55 MXN</p>
+                            </div>
+                    <div class="menu-item">
+                                <h3>Sopes</h3>
+                                 <p>3 piezas de Sopes (Bistec, Longaniza, Mole, Papas, Champiñon) cubiertos de Frijoles, Lechuga, Crema y Quseo doble crema. </p>
+                                 <p class="price">$55 MXN</p>
+                                </div>
+                        <div class="menu-item">
+                                    <h3>Pambazos</h3>
+                                     <p>Pan bañado en adobo Especial para Pambazo, rellenos de Mole o Papas con Longaniza, Lechuga, Queso doble crema y Crema. </p>
+                                     <p class="price">$30 MXN</p>
+                                    </div>
+                                    <div class="menu-item">
+                                        <h3>Sincronizada Sencilla</h3>
+                                         <p>Jamon, Queso Oaxaca, Queso amarillo, bañada en un adobo especial. </p>
+                                         <p class="price">$45 MXN</p>
+                                        </div>  
+                                        <div class="menu-item">
+                                            <h3>Sinconxada con carne</h3>
+                                             <p>Jamon, Queso Amarillo, Queso Oaxaca y Carne a elegir (Bistec, Pastor, Longaniza, Campechano), bañada en un adobo especial.</p>
+                                             <p class="price">$65 MXN</p>
+                                            </div> 
+                                            <div class="menu-item">
+                                                <h3>Gringa</h3>
+                                                 <p>Cane (Bistec, Pastor, Longaniza, Campechano) con Queso Oaxaca.</p>
+                                                 <p class="price">$55 MXN</p>
+                                                </div>  
+                                                <div class="menu-item">
+                                                    <h3>Burrito</h3>
+                                                     <p>Carne (Bistec, Loganiza, Pastor, Campechano) con Queso Oaxaca, Frijol, Lechuga, Jitomate, Aguacate y poca mayonesa. </p>
+                                                     <p class="price">$65 MXN</p>
+                                                    </div> 
+                                                    <div class="menu-item">
+                                                        <h3>Papas a la Francesa</h3>
+                                                         <p></p>
+                                                         <p class="price">$50 MXN</p>
+                                                        </div>
+                                                        <div class="menu-item">
+                                                            <h3>Enfrijoladas</h3>
+                                                             <p>Tortillas rellenas de pollo, bañadas en Frijol, cubiertos de Crema, Quseo doble crema.</p>
+                                                             <p class="price">$90 MXN</p>
+                                                            </div>      
+                     </div>
+        </section>
+    </div>
 </body>
 </html>
